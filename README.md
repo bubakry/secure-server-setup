@@ -9,7 +9,7 @@ This repository contains configuration scripts and resources used to simulate an
 Create a virtual network using tools like VirtualBox, VMware, or GNS3 to simulate an organization’s infrastructure and demonstrate the enforcement of key security policies.
 
 ###  Components
-- **Virtual Machines**: Ubuntu (for servers), Windows (for workstations), and Admin Workstation
+- **Virtual Machines**: All VMs are Linux distributions (e.g., Ubuntu for servers and workstations)
 - **Network Setup**: Static IPs, custom routing, DNS settings
 - **Security Policies Enforced**:
   - SSH key-based authentication only
@@ -64,15 +64,14 @@ To simulate and enforce network security policies, follow these guidelines when 
 - Use **VirtualBox**, **VMware**, or **GNS3** to create isolated virtual machines.
 - Suggested VM roles:
   - **Ubuntu Server** — acts as the target machine to be hardened.
-  - **Windows 10 Workstation** — simulates a regular user environment.
+  - **Other Linux-based Workstation(s)** — used to validate unauthorized access attempts.
   - **Admin Workstation (Ubuntu)** — from which secure SSH access is tested.
 
 ###  Networking Configuration
 - Use **host-only** or **internal networking** for safe, isolated testing.
-- Assign **static IP addresses** to each VM. For example:
+- - Static IP assignment is optional; DHCP within the internal network is acceptable. For example:
   - Admin Workstation: `192.168.65.5`
   - Ubuntu Server: `192.168.65.10`
-  - Windows Workstation: `192.168.65.20`
 
 ###  SSH Key Setup
 On the admin workstation:
