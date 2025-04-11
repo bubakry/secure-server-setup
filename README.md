@@ -94,9 +94,4 @@ Verify passwordless SSH access works before running the hardening scripts.
   ```
 - Attempt to SSH with a password after hardening (should be rejected).
 
----
-
-## Network Diagram
-
-![Network Diagram](./network-diagram.png)
 
